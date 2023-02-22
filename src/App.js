@@ -2,14 +2,14 @@ import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import img1 from "./elderly1.jpg";
-import img2 from "./img2.jpg";
+import work from "./how_it_works.jpg";
 import img3 from "./img3.jpg";
 import logo from "./logo_img.jpg";
 import watch from "./watch.png";
 import team from "./team.jpg";
+import hand from "./hand.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -71,9 +71,7 @@ function App() {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h5 style={{ color: "black" }}>
-                Handwriting Input Method
-              </h5>
+              <h5 style={{ color: "black" }}>Handwriting Input Method</h5>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -84,9 +82,7 @@ function App() {
               alt="Second slide"
             />
             <Carousel.Caption>
-              <h5 style={{ color: "gray" }}>
-                Smart wristband
-              </h5>
+              <h5 style={{ color: "gray" }}>Smart wristband</h5>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -123,7 +119,7 @@ function App() {
           ^ <br /> have a risk of getting parkinson
         </h6>
       </div>
-      <div style={{ marginBottom: 200, marginTop: 40 }}>
+      <div style={{ marginBottom: 60, marginTop: 40 }}>
         <h4 style={{ color: "#3C90CE", marginBottom: 30 }}>
           Parkinson Health Record
         </h4>
@@ -161,6 +157,33 @@ function App() {
           * 50 or more &rarr; Have a risk of getting parkinson
         </h6>
         <h6 style={{ color: "green" }}>Less than 49 &rarr; You are healthy!</h6>
+      </div>
+      {/* Information */}
+      <div>
+        <h4 style={{ color: "#3C90CE" }}>
+          <strong>
+            How our solution works: <br />
+            <img
+              src={work}
+              width="800"
+              height="400"
+              className="d-inline-block align-top img-circle"
+              alt="watch"
+            />
+          </strong>
+        </h4>
+        <h4 style={{ color: "#3C90CE", marginTop: 20 }}>
+          <strong>
+            Handwriting input method: <br />
+            <img
+              src={hand}
+              width="800"
+              height="400"
+              className="d-inline-block align-top img-circle"
+              alt="watch"
+            />
+          </strong>
+        </h4>
       </div>
       <footer class="footer-area footer--light">
         <div class="footer-big">
@@ -255,7 +278,6 @@ function App() {
             </div>
           </div>
         </div>
-
         <div class="mini-footer">
           <div class="container">
             <div class="row">
