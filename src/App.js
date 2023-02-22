@@ -1,15 +1,28 @@
 import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Nav from "react-bootstrap/Nav";
 import img1 from "./elderly1.jpg";
 import img2 from "./img2.jpg";
 import img3 from "./img3.jpg";
 import logo from "./logo_img.jpg";
-import watch from "./watch.jpg";
+import watch from "./watch.png";
+import team from "./team.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+
   return (
     <div className="App">
       <header>
@@ -26,6 +39,22 @@ function App() {
               <h5 style={{ color: "#3C90CE" }}>Parkinson Saver</h5>
             </Navbar.Brand>
             <Navbar.Toggle />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link
+                  href="http://localhost:3000/"
+                  style={{ color: "black", marginLeft: 40 }}
+                >
+                  <h6>Home</h6>
+                </Nav.Link>
+                <Nav.Link
+                  href="#link"
+                  style={{ color: "black", marginLeft: 40 }}
+                >
+                  <h6>Information</h6>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
             <Navbar.Collapse className="justify-content-end">
               <Navbar.Text style={{ color: "black" }}>
                 Signed in as: <h6 style={{ color: "black" }}>Mark Otto</h6>
@@ -41,22 +70,37 @@ function App() {
               src={img1}
               alt="First slide"
             />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              height={400}
-              src={img2}
-              alt="Second slide"
-            />
+            <Carousel.Caption>
+              <h5 style={{ color: "black" }}>
+                Handwriting Input Method
+              </h5>
+            </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
               height={400}
               src={img3}
+              alt="Second slide"
+            />
+            <Carousel.Caption>
+              <h5 style={{ color: "gray" }}>
+                Smart wristband
+              </h5>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              height={400}
+              src={team}
               alt="Third slide"
             />
+            <Carousel.Caption>
+              <h5 style={{ color: "black", marginBottom: 60 }}>
+                Team of Parkinson Saver
+              </h5>
+            </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </header>
@@ -116,7 +160,7 @@ function App() {
         <h6 style={{ color: "#ff404c" }}>
           * 50 or more &rarr; Have a risk of getting parkinson
         </h6>
-        <h6 style={{ color: "green" }}>Less than 49 &rarr; You are health!</h6>
+        <h6 style={{ color: "green" }}>Less than 49 &rarr; You are healthy!</h6>
       </div>
       <footer class="footer-area footer--light">
         <div class="footer-big">
@@ -132,10 +176,10 @@ function App() {
                       className="d-inline-block align-top img-circle"
                       alt="React Bootstrap logo"
                     />
-                    <h4 style={{ color: "#3C90CE" }}>
+                    <h5 style={{ color: "#3C90CE" }}>
                       <strong> Parkinson</strong> <br />
                       Saver
-                    </h4>
+                    </h5>
                     <ul class="contact-details">
                       <li>
                         <span class="icon-earphones"></span> Call Us:
@@ -218,14 +262,17 @@ function App() {
               <div class="col-md-12">
                 <div class="copyright-text">
                   <p>
-                    © 2018
-                    <a href="#">DigiPro</a>. All rights reserved. Created by
-                    <a href="#">AazzTech</a>
+                    © 2023
+                    <a href="#">UCL</a>. All rights reserved. Created by
+                    <a href="#"> Parkinsonsaver</a>
                   </p>
                 </div>
 
                 <div class="go_top">
-                  <span class="icon-arrow-up"></span>
+                  <MdOutlineKeyboardArrowUp
+                    size={30}
+                    onClick={scrollToTop}
+                  ></MdOutlineKeyboardArrowUp>
                 </div>
               </div>
             </div>
