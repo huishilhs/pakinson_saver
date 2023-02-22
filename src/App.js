@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
